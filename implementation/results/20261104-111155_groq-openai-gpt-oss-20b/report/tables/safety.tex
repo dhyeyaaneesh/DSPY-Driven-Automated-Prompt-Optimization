@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Safety-critical error rates (fraction of test cases; lower is better).}
+\label{tab:safety}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Condition & Under-triage & Severe under & Over-triage & Invalid \\
+\midrule
+Manual prompt & \textbf{0.100} & 0.025 & 0.025 & \textbf{0.000} \\
+DSPy zero-shot & 0.175 & \textbf{0.000} & 0.125 & \textbf{0.000} \\
+BootstrapFewShot & \textbf{0.100} & 0.025 & \textbf{0.000} & 0.150 \\
+MIPROv2 (instr.) & 0.300 & 0.025 & 0.075 & \textbf{0.000} \\
+MIPROv2 (instr.+demos) & \textbf{0.100} & \textbf{0.000} & 0.100 & \textbf{0.000} \\
+\bottomrule
+\end{tabular}}
+\end{table}

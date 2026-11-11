@@ -1,0 +1,271 @@
+{
+  "bootstrap_ci": {
+    "manual_raw": {
+      "accuracy": [
+        0.5625,
+        0.4625,
+        0.675
+      ],
+      "under_triage_rate": [
+        0.15,
+        0.075,
+        0.2375
+      ],
+      "over_triage_rate": [
+        0.1625,
+        0.0875,
+        0.2375
+      ]
+    },
+    "dspy_zeroshot": {
+      "accuracy": [
+        0.525,
+        0.4125,
+        0.6375
+      ],
+      "under_triage_rate": [
+        0.175,
+        0.1,
+        0.2625
+      ],
+      "over_triage_rate": [
+        0.1875,
+        0.1,
+        0.275
+      ]
+    },
+    "bootstrap_fewshot": {
+      "accuracy": [
+        0.6875,
+        0.5875,
+        0.7875
+      ],
+      "under_triage_rate": [
+        0.125,
+        0.0625,
+        0.2
+      ],
+      "over_triage_rate": [
+        0.15,
+        0.075,
+        0.2375
+      ]
+    },
+    "mipro_instructions": {
+      "accuracy": [
+        0.525,
+        0.4125,
+        0.6375
+      ],
+      "under_triage_rate": [
+        0.175,
+        0.1,
+        0.2625
+      ],
+      "over_triage_rate": [
+        0.1875,
+        0.1,
+        0.275
+      ]
+    },
+    "mipro_full": {
+      "accuracy": [
+        0.7625,
+        0.6625,
+        0.85
+      ],
+      "under_triage_rate": [
+        0.0625,
+        0.0125,
+        0.125
+      ],
+      "over_triage_rate": [
+        0.1625,
+        0.0875,
+        0.25
+      ]
+    }
+  },
+  "paired_vs_baseline": {
+    "manual_raw": {
+      "dspy_zeroshot": {
+        "mcnemar_b01": 18,
+        "mcnemar_b10": 21,
+        "mcnemar_p": 0.7492586247608418,
+        "diff_ci": {
+          "accuracy": [
+            -0.0375,
+            -0.2,
+            0.1125
+          ],
+          "under_triage_rate": [
+            0.025,
+            -0.0875,
+            0.1375
+          ],
+          "over_triage_rate": [
+            0.025,
+            -0.06281249999999998,
+            0.1125
+          ]
+        }
+      },
+      "bootstrap_fewshot": {
+        "mcnemar_b01": 23,
+        "mcnemar_b10": 13,
+        "mcnemar_p": 0.13249816396273675,
+        "diff_ci": {
+          "accuracy": [
+            0.125,
+            -0.025,
+            0.275
+          ],
+          "under_triage_rate": [
+            -0.025,
+            -0.1375,
+            0.0875
+          ],
+          "over_triage_rate": [
+            -0.0125,
+            -0.1,
+            0.075
+          ]
+        }
+      },
+      "mipro_instructions": {
+        "mcnemar_b01": 18,
+        "mcnemar_b10": 21,
+        "mcnemar_p": 0.7492586247608418,
+        "diff_ci": {
+          "accuracy": [
+            -0.0375,
+            -0.2,
+            0.1125
+          ],
+          "under_triage_rate": [
+            0.025,
+            -0.0875,
+            0.1375
+          ],
+          "over_triage_rate": [
+            0.025,
+            -0.06281249999999998,
+            0.1125
+          ]
+        }
+      },
+      "mipro_full": {
+        "mcnemar_b01": 26,
+        "mcnemar_b10": 10,
+        "mcnemar_p": 0.011330984183587134,
+        "diff_ci": {
+          "accuracy": [
+            0.2,
+            0.0625,
+            0.3375
+          ],
+          "under_triage_rate": [
+            -0.0875,
+            -0.1875,
+            0.0125
+          ],
+          "over_triage_rate": [
+            0.0,
+            -0.1,
+            0.1
+          ]
+        }
+      }
+    },
+    "dspy_zeroshot": {
+      "manual_raw": {
+        "mcnemar_b01": 21,
+        "mcnemar_b10": 18,
+        "mcnemar_p": 0.7492586247608418,
+        "diff_ci": {
+          "accuracy": [
+            0.0375,
+            -0.1125,
+            0.2
+          ],
+          "under_triage_rate": [
+            -0.025,
+            -0.1375,
+            0.0875
+          ],
+          "over_triage_rate": [
+            -0.025,
+            -0.1125,
+            0.0628124999999983
+          ]
+        }
+      },
+      "bootstrap_fewshot": {
+        "mcnemar_b01": 15,
+        "mcnemar_b10": 2,
+        "mcnemar_p": 0.002349853515625,
+        "diff_ci": {
+          "accuracy": [
+            0.1625,
+            0.0625,
+            0.2625
+          ],
+          "under_triage_rate": [
+            -0.05,
+            -0.125,
+            0.0125
+          ],
+          "over_triage_rate": [
+            -0.0375,
+            -0.1,
+            0.025
+          ]
+        }
+      },
+      "mipro_instructions": {
+        "mcnemar_b01": 0,
+        "mcnemar_b10": 0,
+        "mcnemar_p": 1.0,
+        "diff_ci": {
+          "accuracy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "under_triage_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "over_triage_rate": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mipro_full": {
+        "mcnemar_b01": 26,
+        "mcnemar_b10": 7,
+        "mcnemar_p": 0.0013187271542847157,
+        "diff_ci": {
+          "accuracy": [
+            0.2375,
+            0.1125,
+            0.375
+          ],
+          "under_triage_rate": [
+            -0.1125,
+            -0.225,
+            -0.0125
+          ],
+          "over_triage_rate": [
+            -0.025,
+            -0.1125,
+            0.0625
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+dspy>=3.0
+optuna            # required by MIPROv2
+gepa              # required by dspy.GEPA (optional condition)
+pydantic>=2
+scikit-learn
+scipy
+numpy
+pandas
+matplotlib
+pyyaml
+tabulate
+streamlit         # demo UI (app.py)

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Optimisation and inference cost.}
+\label{tab:cost}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Condition & Opt. time (s) & Opt. LM calls & Opt. tokens (k) & Opt. cost ($) & Test tokens/case & Latency/case (s) \\
+\midrule
+Manual prompt & 0.000 & 0.000 & 0.000 & 0.000 & 471.625 & 1.400 \\
+DSPy zero-shot & 0.000 & 0.000 & 0.000 & 0.000 & 844.450 & 201.033 \\
+BootstrapFewShot & 2.440 & 3.000 & 3.645 & 0.000 & 1178.050 & 473.163 \\
+MIPROv2 (instr.) & 54437.280 & 110.000 & 129.678 & 0.014 & 1265.975 & 357.382 \\
+MIPROv2 (instr.+demos) & 69692.920 & 107.000 & 139.244 & 0.014 & 844.550 & 5.769 \\
+\bottomrule
+\end{tabular}}
+\end{table}

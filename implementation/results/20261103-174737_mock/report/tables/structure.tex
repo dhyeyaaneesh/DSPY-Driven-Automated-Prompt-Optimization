@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Structured-output reliability.}
+\label{tab:structure}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccc}
+\toprule
+Condition & Valid output & Field compl. & Label extractable \\
+\midrule
+Manual prompt & 0.875 & 0.875 & 0.875 \\
+DSPy zero-shot & 0.887 & 0.887 & 0.887 \\
+BootstrapFewShot & 0.963 & 0.963 & 0.963 \\
+MIPROv2 (instr.) & 0.887 & 0.887 & 0.887 \\
+MIPROv2 (instr.+demos) & \textbf{0.988} & \textbf{0.988} & \textbf{0.988} \\
+\bottomrule
+\end{tabular}}
+\end{table}

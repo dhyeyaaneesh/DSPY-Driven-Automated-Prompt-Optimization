@@ -1,0 +1,165 @@
+##### Predictor: predict
+
+=== INSTRUCTION ===
+Act as an experienced triage nurse. Prioritise safety: any red flag means EMERGENCY or URGENT.
+
+=== 4 DEMOS ===
+--- demo 1 ---
+symptoms: Hi, 37F here. My issue: a mild cough with a runny nose, otherwise well, since the weekend. Background: Has mild hay fever.
+urgency_level: SELF_CARE
+primary_concern: possible self-care condition
+red_flags: []
+recommended_action: Self-care at home; seek help if worse.
+confidence: 0.51
+--- demo 2 ---
+symptoms: Age 18, male. Symptoms: sudden severe pain in one testicle with swelling and vomiting; since early this morning. Also: no injury. Background: No significant past medical history.
+urgency_level: EMERGENCY
+primary_concern: possible emergency condition
+red_flags: ['concerning feature']
+recommended_action: Call emergency services now.
+confidence: 0.62
+--- demo 3 ---
+symptoms: Hi, 14M here. My issue: a sudden, very painful testicle that started during sleep, with nausea, since early this morning. Also: no injury.
+urgency_level: EMERGENCY
+primary_concern: possible emergency condition
+red_flags: ['concerning feature']
+recommended_action: Call emergency services now.
+confidence: 0.57
+--- demo 4 ---
+symptoms: 37-year-old man. Presenting complaint: back pain and sciatica, now unable to feel the saddle area and has lost bladder control; for 1 day. Associated: both legs feel weak. Has well-controlled high blood pressure. They ask whether they can still go to the gym.
+urgency_level: EMERGENCY
+red_flags: ['saddle anaesthesia', 'bladder dysfunction (cauda equina)']
+
+=== FULL RENDERED MESSAGES (as sent to the LM) ===
+[SYSTEM]
+Your input fields are:
+1. `symptoms` (str): Free-text description of the patient's symptoms and context
+Your output fields are:
+1. `urgency_level` (Literal['EMERGENCY', 'URGENT', 'NON_URGENT', 'SELF_CARE']): Exactly one urgency label
+2. `primary_concern` (str): Most likely clinical concern in a few words
+3. `red_flags` (list[str]): Red-flag features present in the description (empty list if none)
+4. `recommended_action` (str): One-sentence next step for the patient
+5. `confidence` (float): Confidence in the urgency label, between 0 and 1
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## symptoms ## ]]
+{symptoms}
+
+[[ ## urgency_level ## ]]
+{urgency_level}        # note: the value you produce must exactly match (no extra characters) one of: EMERGENCY; URGENT; NON_URGENT; SELF_CARE
+
+[[ ## primary_concern ## ]]
+{primary_concern}
+
+[[ ## red_flags ## ]]
+{red_flags}        # note: the value you produce must adhere to the JSON schema: {"type": "array", "items": {"type": "string"}}
+
+[[ ## recommended_action ## ]]
+{recommended_action}
+
+[[ ## confidence ## ]]
+{confidence}        # note: the value you produce must be a single float value
+
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Act as an experienced triage nurse. Prioritise safety: any red flag means EMERGENCY or URGENT.
+
+[USER]
+This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## symptoms ## ]]
+37-year-old man. Presenting complaint: back pain and sciatica, now unable to feel the saddle area and has lost bladder control; for 1 day. Associated: both legs feel weak. Has well-controlled high blood pressure. They ask whether they can still go to the gym.
+
+[ASSISTANT]
+[[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+Not supplied for this particular example. 
+
+[[ ## red_flags ## ]]
+["saddle anaesthesia", "bladder dysfunction (cauda equina)"]
+
+[[ ## recommended_action ## ]]
+Not supplied for this particular example. 
+
+[[ ## confidence ## ]]
+Not supplied for this particular example.
+
+[[ ## completed ## ]]
+
+
+[USER]
+[[ ## symptoms ## ]]
+Hi, 37F here. My issue: a mild cough with a runny nose, otherwise well, since the weekend. Background: Has mild hay fever.
+
+[ASSISTANT]
+[[ ## urgency_level ## ]]
+SELF_CARE
+
+[[ ## primary_concern ## ]]
+possible self-care condition
+
+[[ ## red_flags ## ]]
+[]
+
+[[ ## recommended_action ## ]]
+Self-care at home; seek help if worse.
+
+[[ ## confidence ## ]]
+0.51
+
+[[ ## completed ## ]]
+
+
+[USER]
+[[ ## symptoms ## ]]
+Age 18, male. Symptoms: sudden severe pain in one testicle with swelling and vomiting; since early this morning. Also: no injury. Background: No significant past medical history.
+
+[ASSISTANT]
+[[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+["concerning feature"]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## confidence ## ]]
+0.62
+
+[[ ## completed ## ]]
+
+
+[USER]
+[[ ## symptoms ## ]]
+Hi, 14M here. My issue: a sudden, very painful testicle that started during sleep, with nausea, since early this morning. Also: no injury.
+
+[ASSISTANT]
+[[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+["concerning feature"]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## confidence ## ]]
+0.57
+
+[[ ## completed ## ]]
+
+
+[USER]
+[[ ## symptoms ## ]]
+I'm 17 (male). Main problem: a first-ever seizure lasting about one minute, now awake and talking normally — about 3 hours ago. Background: Takes no regular medication. Can I still go to the gym?
+
+Respond with the corresponding output fields, starting with the field `[[ ## urgency_level ## ]]` (must be formatted as a valid Python Literal['EMERGENCY', 'URGENT', 'NON_URGENT', 'SELF_CARE']), then `[[ ## primary_concern ## ]]`, then `[[ ## red_flags ## ]]` (must be formatted as a valid Python list[str]), then `[[ ## recommended_action ## ]]`, then `[[ ## confidence ## ]]` (must be formatted as a valid Python float), and then ending with the marker for `[[ ## completed ## ]]`.

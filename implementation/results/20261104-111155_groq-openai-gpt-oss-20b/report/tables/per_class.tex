@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Per-class recall.}
+\label{tab:perclass}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Condition & EMERGENCY recall & URGENT recall & NON\_URGENT recall & SELF\_CARE recall \\
+\midrule
+Manual prompt & \textbf{0.917} & \textbf{0.917} & \textbf{0.750} & 0.875 \\
+DSPy zero-shot & \textbf{0.917} & 0.667 & \textbf{0.750} & 0.375 \\
+BootstrapFewShot & 0.833 & 0.583 & 0.625 & \textbf{1.000} \\
+MIPROv2 (instr.) & 0.750 & 0.500 & 0.625 & 0.625 \\
+MIPROv2 (instr.+demos) & \textbf{0.917} & 0.833 & \textbf{0.750} & 0.625 \\
+\bottomrule
+\end{tabular}}
+\end{table}

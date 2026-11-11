@@ -1,0 +1,14 @@
+condition,case_id,pred,symptoms,errors
+manual_raw,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+dspy_zeroshot,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+bootstrap_fewshot,anaphylaxis_07,INVALID,"Hi, 39F here. My issue: swelling of the lips and tongue, wheezing and a widespread itchy rash after eating peanuts, beginning a few minutes ago. Background: Has mild hay fever.","AdapterParseError: Failed to parse field red_flags with value Swelling of lips and tongue, wheezing, widespread itchy rash, onset within minutes of exposure from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='Swelling of lips and ton...hin  | no parsable output"
+bootstrap_fewshot,preeclampsia_03,INVALID,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.","AdapterParseError: Failed to parse field red_flags with value - Headache
+- Blurred vision
+- Facial puffiness
+- Right rib pain (possible abdominal pain) from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Headache\n- Blurred vi...ossible a | no parsable output"
+mipro_instructions,suicidal_01,URGENT,"Age 45, female. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has hypothyroidism on levothyroxine.",
+mipro_instructions,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+mipro_instructions,suicidal_07,URGENT,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",
+mipro_full,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",

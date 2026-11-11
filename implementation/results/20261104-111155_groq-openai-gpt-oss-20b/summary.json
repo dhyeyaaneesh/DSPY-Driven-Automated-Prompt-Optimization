@@ -1,0 +1,437 @@
+{
+  "manual_raw": {
+    "n": 40,
+    "accuracy": 0.875,
+    "macro_f1": 0.8627415458937198,
+    "weighted_kappa": 0.8795180722891566,
+    "under_triage_rate": 0.1,
+    "over_triage_rate": 0.025,
+    "severe_under_triage_rate": 0.025,
+    "emergency_sensitivity": 0.9166666666666666,
+    "invalid_label_rate": 0.0,
+    "per_class": {
+      "EMERGENCY": {
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1": 0.9565217391304348,
+        "support": 12
+      },
+      "URGENT": {
+        "precision": 0.9166666666666666,
+        "recall": 0.9166666666666666,
+        "f1": 0.9166666666666666,
+        "support": 12
+      },
+      "NON_URGENT": {
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1": 0.8,
+        "support": 8
+      },
+      "SELF_CARE": {
+        "precision": 0.7,
+        "recall": 0.875,
+        "f1": 0.7777777777777778,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        11,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        7,
+        0
+      ]
+    ],
+    "confusion_labels_rows": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE"
+    ],
+    "confusion_labels_cols": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE",
+      "INVALID"
+    ],
+    "valid_output_rate": 1.0,
+    "mean_field_completeness": 1.0,
+    "label_extractable_rate": 1.0,
+    "mean_latency_s": 1.400075,
+    "n_api_errors": 0,
+    "condition": "manual_raw",
+    "seed": 0
+  },
+  "dspy_zeroshot": {
+    "n": 40,
+    "accuracy": 0.7,
+    "macro_f1": 0.6754260232521102,
+    "weighted_kappa": 0.7468354430379747,
+    "under_triage_rate": 0.175,
+    "over_triage_rate": 0.125,
+    "severe_under_triage_rate": 0.0,
+    "emergency_sensitivity": 0.9166666666666666,
+    "invalid_label_rate": 0.0,
+    "per_class": {
+      "EMERGENCY": {
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1": 0.9565217391304348,
+        "support": 12
+      },
+      "URGENT": {
+        "precision": 0.8888888888888888,
+        "recall": 0.6666666666666666,
+        "f1": 0.7619047619047619,
+        "support": 12
+      },
+      "NON_URGENT": {
+        "precision": 0.4,
+        "recall": 0.75,
+        "f1": 0.5217391304347826,
+        "support": 8
+      },
+      "SELF_CARE": {
+        "precision": 0.6,
+        "recall": 0.375,
+        "f1": 0.46153846153846156,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        3,
+        0
+      ]
+    ],
+    "confusion_labels_rows": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE"
+    ],
+    "confusion_labels_cols": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE",
+      "INVALID"
+    ],
+    "valid_output_rate": 1.0,
+    "mean_field_completeness": 1.0,
+    "label_extractable_rate": 1.0,
+    "mean_latency_s": 201.032525,
+    "n_api_errors": 0,
+    "condition": "dspy_zeroshot",
+    "seed": 0
+  },
+  "bootstrap_fewshot": {
+    "n": 40,
+    "accuracy": 0.75,
+    "macro_f1": 0.8037909458962091,
+    "weighted_kappa": 0.890038809831824,
+    "under_triage_rate": 0.1,
+    "over_triage_rate": 0.0,
+    "severe_under_triage_rate": 0.025,
+    "emergency_sensitivity": 0.8333333333333334,
+    "invalid_label_rate": 0.15,
+    "per_class": {
+      "EMERGENCY": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "support": 12
+      },
+      "URGENT": {
+        "precision": 1.0,
+        "recall": 0.5833333333333334,
+        "f1": 0.7368421052631579,
+        "support": 12
+      },
+      "NON_URGENT": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692307692307693,
+        "support": 8
+      },
+      "SELF_CARE": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        7,
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        5,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8,
+        0
+      ]
+    ],
+    "confusion_labels_rows": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE"
+    ],
+    "confusion_labels_cols": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE",
+      "INVALID"
+    ],
+    "valid_output_rate": 0.85,
+    "mean_field_completeness": 0.85,
+    "label_extractable_rate": 0.85,
+    "mean_latency_s": 473.1629500000001,
+    "n_api_errors": 0,
+    "condition": "bootstrap_fewshot",
+    "seed": 0
+  },
+  "mipro_instructions": {
+    "n": 40,
+    "accuracy": 0.625,
+    "macro_f1": 0.623249299719888,
+    "weighted_kappa": 0.6761133603238867,
+    "under_triage_rate": 0.3,
+    "over_triage_rate": 0.075,
+    "severe_under_triage_rate": 0.025,
+    "emergency_sensitivity": 0.75,
+    "invalid_label_rate": 0.0,
+    "per_class": {
+      "EMERGENCY": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 12
+      },
+      "URGENT": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285714,
+        "support": 12
+      },
+      "NON_URGENT": {
+        "precision": 0.38461538461538464,
+        "recall": 0.625,
+        "f1": 0.47619047619047616,
+        "support": 8
+      },
+      "SELF_CARE": {
+        "precision": 0.5555555555555556,
+        "recall": 0.625,
+        "f1": 0.5882352941176471,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        9,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        5,
+        0
+      ]
+    ],
+    "confusion_labels_rows": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE"
+    ],
+    "confusion_labels_cols": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE",
+      "INVALID"
+    ],
+    "valid_output_rate": 1.0,
+    "mean_field_completeness": 1.0,
+    "label_extractable_rate": 1.0,
+    "mean_latency_s": 357.38177499999995,
+    "n_api_errors": 0,
+    "condition": "mipro_instructions",
+    "seed": 0
+  },
+  "mipro_full": {
+    "n": 40,
+    "accuracy": 0.8,
+    "macro_f1": 0.779891304347826,
+    "weighted_kappa": 0.8347107438016529,
+    "under_triage_rate": 0.1,
+    "over_triage_rate": 0.1,
+    "severe_under_triage_rate": 0.0,
+    "emergency_sensitivity": 0.9166666666666666,
+    "invalid_label_rate": 0.0,
+    "per_class": {
+      "EMERGENCY": {
+        "precision": 0.9166666666666666,
+        "recall": 0.9166666666666666,
+        "f1": 0.9166666666666666,
+        "support": 12
+      },
+      "URGENT": {
+        "precision": 0.9090909090909091,
+        "recall": 0.8333333333333334,
+        "f1": 0.8695652173913043,
+        "support": 12
+      },
+      "NON_URGENT": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666666,
+        "support": 8
+      },
+      "SELF_CARE": {
+        "precision": 0.7142857142857143,
+        "recall": 0.625,
+        "f1": 0.6666666666666666,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        10,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        5,
+        0
+      ]
+    ],
+    "confusion_labels_rows": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE"
+    ],
+    "confusion_labels_cols": [
+      "EMERGENCY",
+      "URGENT",
+      "NON_URGENT",
+      "SELF_CARE",
+      "INVALID"
+    ],
+    "valid_output_rate": 1.0,
+    "mean_field_completeness": 1.0,
+    "label_extractable_rate": 1.0,
+    "mean_latency_s": 5.769,
+    "n_api_errors": 0,
+    "condition": "mipro_full",
+    "seed": 0
+  }
+}

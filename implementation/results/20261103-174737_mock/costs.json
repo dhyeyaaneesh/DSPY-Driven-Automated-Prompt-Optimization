@@ -1,0 +1,82 @@
+{
+  "manual_raw": {
+    "optimize": {
+      "wall_time_s": 0.0,
+      "lm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "est_cost_usd": 0.0
+    },
+    "evaluate": {
+      "wall_time_s": 0.12,
+      "lm_calls": 80,
+      "input_tokens": 20545,
+      "output_tokens": 3833,
+      "est_cost_usd": 0.0013
+    }
+  },
+  "dspy_zeroshot": {
+    "optimize": {
+      "wall_time_s": 0.0,
+      "lm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "est_cost_usd": 0.0
+    },
+    "evaluate": {
+      "wall_time_s": 0.3,
+      "lm_calls": 80,
+      "input_tokens": 53407,
+      "output_tokens": 4813,
+      "est_cost_usd": 0.0031
+    }
+  },
+  "bootstrap_fewshot": {
+    "optimize": {
+      "wall_time_s": 0.03,
+      "lm_calls": 5,
+      "input_tokens": 6526,
+      "output_tokens": 303,
+      "est_cost_usd": 0.0004
+    },
+    "evaluate": {
+      "wall_time_s": 0.35,
+      "lm_calls": 80,
+      "input_tokens": 90089,
+      "output_tokens": 4869,
+      "est_cost_usd": 0.0049
+    }
+  },
+  "mipro_instructions": {
+    "optimize": {
+      "wall_time_s": 3.22,
+      "lm_calls": 658,
+      "input_tokens": 394970,
+      "output_tokens": 39284,
+      "est_cost_usd": 0.0229
+    },
+    "evaluate": {
+      "wall_time_s": 0.4,
+      "lm_calls": 80,
+      "input_tokens": 53407,
+      "output_tokens": 4813,
+      "est_cost_usd": 0.0031
+    }
+  },
+  "mipro_full": {
+    "optimize": {
+      "wall_time_s": 3.17,
+      "lm_calls": 682,
+      "input_tokens": 683668,
+      "output_tokens": 41068,
+      "est_cost_usd": 0.0375
+    },
+    "evaluate": {
+      "wall_time_s": 0.28,
+      "lm_calls": 80,
+      "input_tokens": 80987,
+      "output_tokens": 4891,
+      "est_cost_usd": 0.0044
+    }
+  }
+}

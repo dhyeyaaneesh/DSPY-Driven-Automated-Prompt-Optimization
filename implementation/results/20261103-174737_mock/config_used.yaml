@@ -1,0 +1,43 @@
+conditions:
+- manual_raw
+- dspy_zeroshot
+- bootstrap_fewshot
+- mipro_instructions
+- mipro_full
+data:
+  cases_per_scenario: 8
+  dir: data
+  fractions:
+  - 0.2
+  - 0.2
+  - 0.6
+  grouped_split: true
+  max_test: null
+  seed: 42
+json_adapter_fallback: false
+metric: safety
+num_threads: 4
+optimizer_seeds:
+- 0
+optimizers:
+  bootstrap_fewshot:
+    max_bootstrapped_demos: 4
+    max_labeled_demos: 4
+  gepa:
+    auto: light
+  mipro:
+    auto: light
+    max_bootstrapped_demos: 4
+    max_labeled_demos: 4
+    minibatch_size: 35
+prices:
+  input_per_1m: 0.05
+  output_per_1m: 0.08
+prompt_lm: null
+reasoning: false
+results_dir: results
+task_lm:
+  cache: false
+  max_tokens: 600
+  model: mock
+  temperature: 0.0

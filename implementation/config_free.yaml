@@ -1,0 +1,54 @@
+# Free-tier budget version of config.yaml (Groq free key: 1,000 requests/day).
+# Same model, metric and conditions; fewer cases and a smaller MIPROv2 search.
+# Good for a basic working result. Use config.yaml for the full experiment.
+
+task_lm:
+  model: groq/openai/gpt-oss-20b
+  temperature: 0.0
+  max_tokens: 2000
+  reasoning_effort: low   # gpt-oss is a reasoning model; 600 tokens left empty/cut-off answers
+  num_retries: 12
+  cache: false
+prompt_lm: null
+prices:
+  input_per_1m: 0.075
+  output_per_1m: 0.3
+data:
+  dir: data
+  cases_per_scenario: 8
+  grouped_split: true
+  fractions:
+  - 0.2
+  - 0.2
+  - 0.6
+  seed: 42
+  max_test: 40
+  max_train: 40
+  max_val: 20
+metric: safety
+reasoning: false
+json_adapter_fallback: false
+num_threads: 1
+conditions:
+- manual_raw
+- dspy_zeroshot
+- bootstrap_fewshot
+- mipro_instructions
+- mipro_full
+optimizer_seeds:
+- 0
+optimizers:
+  bootstrap_fewshot:
+    max_bootstrapped_demos: 3
+    max_labeled_demos: 3
+  mipro:
+    auto: null
+    num_candidates: 3
+    num_trials: 5
+    minibatch_size: 10
+    minibatch_full_eval_steps: 5
+    max_bootstrapped_demos: 3
+    max_labeled_demos: 3
+  gepa:
+    auto: light
+results_dir: results

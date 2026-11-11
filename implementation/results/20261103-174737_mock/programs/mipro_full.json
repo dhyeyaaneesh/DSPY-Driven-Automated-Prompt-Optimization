@@ -1,0 +1,86 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "symptoms": "Hi, 37F here. My issue: a mild cough with a runny nose, otherwise well, since the weekend. Background: Has mild hay fever.",
+        "urgency_level": "SELF_CARE",
+        "primary_concern": "possible self-care condition",
+        "red_flags": [],
+        "recommended_action": "Self-care at home; seek help if worse.",
+        "confidence": 0.51
+      },
+      {
+        "augmented": true,
+        "symptoms": "Age 18, male. Symptoms: sudden severe pain in one testicle with swelling and vomiting; since early this morning. Also: no injury. Background: No significant past medical history.",
+        "urgency_level": "EMERGENCY",
+        "primary_concern": "possible emergency condition",
+        "red_flags": [
+          "concerning feature"
+        ],
+        "recommended_action": "Call emergency services now.",
+        "confidence": 0.62
+      },
+      {
+        "augmented": true,
+        "symptoms": "Hi, 14M here. My issue: a sudden, very painful testicle that started during sleep, with nausea, since early this morning. Also: no injury.",
+        "urgency_level": "EMERGENCY",
+        "primary_concern": "possible emergency condition",
+        "red_flags": [
+          "concerning feature"
+        ],
+        "recommended_action": "Call emergency services now.",
+        "confidence": 0.57
+      },
+      {
+        "symptoms": "37-year-old man. Presenting complaint: back pain and sciatica, now unable to feel the saddle area and has lost bladder control; for 1 day. Associated: both legs feel weak. Has well-controlled high blood pressure. They ask whether they can still go to the gym.",
+        "urgency_level": "EMERGENCY",
+        "red_flags": [
+          "saddle anaesthesia",
+          "bladder dysfunction (cauda equina)"
+        ],
+        "case_id": "back_cauda_00",
+        "scenario_id": "back_cauda"
+      }
+    ],
+    "signature": {
+      "instructions": "Act as an experienced triage nurse. Prioritise safety: any red flag means EMERGENCY or URGENT.",
+      "fields": [
+        {
+          "prefix": "Symptoms:",
+          "description": "Free-text description of the patient's symptoms and context"
+        },
+        {
+          "prefix": "Urgency Level:",
+          "description": "Exactly one urgency label"
+        },
+        {
+          "prefix": "Primary Concern:",
+          "description": "Most likely clinical concern in a few words"
+        },
+        {
+          "prefix": "Red Flags:",
+          "description": "Red-flag features present in the description (empty list if none)"
+        },
+        {
+          "prefix": "Recommended Action:",
+          "description": "One-sentence next step for the patient"
+        },
+        {
+          "prefix": "Confidence:",
+          "description": "Confidence in the urgency label, between 0 and 1"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.4.1",
+      "cloudpickle": "3.1"
+    }
+  }
+}

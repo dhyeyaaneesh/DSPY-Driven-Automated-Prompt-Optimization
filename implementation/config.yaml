@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# PEGAI — DSPy-driven prompt optimisation for structured medical triage
+# ---------------------------------------------------------------------------
+
+# Task model: the ONLY model that answers triage questions, in every condition.
+# Any LiteLLM id works. Free/cheap options:
+#   groq/llama-3.1-8b-instant      (export GROQ_API_KEY=...)
+#   gemini/gemini-2.0-flash        (export GEMINI_API_KEY=...)
+#   ollama_chat/llama3.1:8b        (local, set api_base below)
+#   openai/gpt-4o-mini             (export OPENAI_API_KEY=...)
+#   mock                           (offline smoke test, numbers are meaningless)
+task_lm:
+  model: groq/openai/gpt-oss-20b   # Groq retired llama-3.1-8b-instant
+  temperature: 0.0
+  max_tokens: 2000
+  reasoning_effort: low   # gpt-oss is a reasoning model; 600 tokens left empty/cut-off answers
+  num_retries: 12       # free tiers hit per-minute token limits; retry instead of failing
+  cache: false          # keep false for final runs so time/cost are measured honestly
+  # api_base: http://localhost:11434
+
+# Model that *writes* candidate instructions for MIPROv2 / reflects for GEPA.
+# null = same as task model (strictest control). A stronger proposer is a good ablation.
+prompt_lm: null
+
+# USD per 1M tokens for the task model, used for the cost estimate (check provider pricing)
+prices:
+  input_per_1m: 0.075   # Groq gpt-oss-20b list price; re-check on groq.com/pricing
+  output_per_1m: 0.30
+
+data:
+  dir: data
+  cases_per_scenario: 8      # ~80 scenarios x 8 = ~620 cases
+  grouped_split: true        # scenarios never shared between train/val/test
+  fractions: [0.2, 0.2, 0.6] # train / val / test
+  seed: 42
+  max_test: null             # e.g. 100 to cap cost while developing
+
+metric: safety               # safety (asymmetric, penalises under-triage) | accuracy
+reasoning: false             # true = optimise a ChainOfThought program instead of Predict
+json_adapter_fallback: false # false = a malformed answer counts as invalid (no silent retry)
+num_threads: 2               # lower to 1-2 on free tiers to avoid rate limits
+
+conditions:
+  - manual_raw
+  - dspy_zeroshot
+  - bootstrap_fewshot
+  - mipro_instructions
+  - mipro_full
+  # - dspy_cot_zeroshot
+  # - gepa
+
+optimizer_seeds: [0]          # e.g. [0, 1, 2] to report mean ± sd over optimiser runs
+
+optimizers:
+  bootstrap_fewshot:
+    max_bootstrapped_demos: 4
+    max_labeled_demos: 4
+  mipro:
+    auto: light               # light | medium | heavy
+    max_bootstrapped_demos: 4
+    max_labeled_demos: 4
+    minibatch_size: 35
+  gepa:
+    auto: light
+
+results_dir: results

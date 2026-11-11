@@ -1,0 +1,50 @@
+conditions:
+- manual_raw
+- dspy_zeroshot
+- bootstrap_fewshot
+- mipro_instructions
+- mipro_full
+data:
+  cases_per_scenario: 8
+  dir: data
+  fractions:
+  - 0.2
+  - 0.2
+  - 0.6
+  grouped_split: true
+  max_test: 40
+  max_train: 40
+  max_val: 20
+  seed: 42
+json_adapter_fallback: false
+metric: safety
+num_threads: 1
+optimizer_seeds:
+- 0
+optimizers:
+  bootstrap_fewshot:
+    max_bootstrapped_demos: 3
+    max_labeled_demos: 3
+  gepa:
+    auto: light
+  mipro:
+    auto: null
+    max_bootstrapped_demos: 3
+    max_labeled_demos: 3
+    minibatch_full_eval_steps: 5
+    minibatch_size: 10
+    num_candidates: 3
+    num_trials: 5
+prices:
+  input_per_1m: 0.075
+  output_per_1m: 0.3
+prompt_lm: null
+reasoning: false
+results_dir: results
+task_lm:
+  cache: false
+  max_tokens: 2000
+  model: groq/openai/gpt-oss-20b
+  num_retries: 12
+  reasoning_effort: low
+  temperature: 0.0

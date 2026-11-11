@@ -1,0 +1,140 @@
+condition,case_id,pred,symptoms,errors
+manual_raw,suicidal_01,URGENT,"Age 45, female. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has hypothyroidism on levothyroxine.",
+manual_raw,preeclampsia_03,INVALID,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",no parsable output
+manual_raw,suicidal_07,URGENT,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",
+manual_raw,ha_mening_01,URGENT,"Hi, 22F here. My issue: fever, headache, pain bending the neck and dark spots on the skin that don't blanch, since this morning. Also: increasingly drowsy, light hurts the eyes. Background: Has mild hay fever. I recently moved house.",
+manual_raw,ab_gibleed_04,URGENT,70-year-old man. Presenting complaint: throwing up blood twice and having black sticky stools; over the last few hours. Associated: feeling faint when standing. Previously fit and well.,
+manual_raw,cough_haemoptysis_03,URGENT,"Hi, 49F here. My issue: coughing up lots of fresh blood repeatedly, starting this evening. Also: breathless. Background: Has hypothyroidism on levothyroxine.",
+manual_raw,preeclampsia_04,URGENT,"I'm 28 (female). Main problem: late pregnancy with a pounding headache, blurred vision and puffy face — since this afternoon. Background: Takes no regular medication.",
+manual_raw,ha_injury_anticoag_05,URGENT,"75-year-old man. Presenting complaint: a fall with a blow to the head while taking warfarin, now vomiting repeatedly and confused; this afternoon. Has high cholesterol on a statin. They have been drinking more coffee than usual.",
+manual_raw,ha_injury_anticoag_00,URGENT,"82-year-old woman. Presenting complaint: hit the head on a step after tripping, is on blood thinners and has since been drowsy and vomiting; this afternoon. Has high cholesterol on a statin. They ask whether they can still go to the gym.",
+dspy_zeroshot,anaphylaxis_07,URGENT,"Hi, 39F here. My issue: swelling of the lips and tongue, wheezing and a widespread itchy rash after eating peanuts, beginning a few minutes ago. Background: Has mild hay fever.",
+dspy_zeroshot,ab_gibleed_00,URGENT,31-year-old woman. Presenting complaint: throwing up blood twice and having black sticky stools; since this morning. Associated: pale and clammy. Has hypothyroidism on levothyroxine.,
+dspy_zeroshot,dka_04,URGENT,"I'm 33 (female). Main problem: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake — getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin.",
+dspy_zeroshot,burn_major_04,URGENT,"About my 4-year-old son: a big burn over the front of the body after a pan of boiling water tipped over, 15 minutes ago. Also: screaming in pain.",
+dspy_zeroshot,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+dspy_zeroshot,suicidal_07,URGENT,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",
+dspy_zeroshot,dka_02,URGENT,"Age 23, male. Symptoms: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake; getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin. I recently moved house.",
+dspy_zeroshot,ha_mening_01,URGENT,"Hi, 22F here. My issue: fever, headache, pain bending the neck and dark spots on the skin that don't blanch, since this morning. Also: increasingly drowsy, light hurts the eyes. Background: Has mild hay fever. I recently moved house.",
+dspy_zeroshot,cough_haemoptysis_04,INVALID,"66-year-old woman. Presenting complaint: coughing up large amounts of bright red blood, several cupfuls; starting this evening. Has hypothyroidism on levothyroxine.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+possible urgent condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Seek same-day medical assessment.
+
+[[ ## completed ## ]] 
+
+Expecte | no parsable output"
+dspy_zeroshot,ab_gibleed_06,URGENT,"Age 61, male. Symptoms: vomiting bright red blood and passing black, tarry stools; over the last few hours. Background: Has mild hay fever.",
+dspy_zeroshot,cough_haemoptysis_03,INVALID,"Hi, 49F here. My issue: coughing up lots of fresh blood repeatedly, starting this evening. Also: breathless. Background: Has hypothyroidism on levothyroxine.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## completed ## ]] 
+
+Expect | no parsable output"
+dspy_zeroshot,suicidal_03,URGENT,33-year-old woman. Presenting complaint: hopelessness with a clear intention to end life and access to the means at home; today. Associated: lives alone. Has high cholesterol on a statin.,
+bootstrap_fewshot,anaphylaxis_07,INVALID,"Hi, 39F here. My issue: swelling of the lips and tongue, wheezing and a widespread itchy rash after eating peanuts, beginning a few minutes ago. Background: Has mild hay fever.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## completed ## ]] 
+
+Expect | no parsable output"
+bootstrap_fewshot,ab_gibleed_00,URGENT,31-year-old woman. Presenting complaint: throwing up blood twice and having black sticky stools; since this morning. Associated: pale and clammy. Has hypothyroidism on levothyroxine.,
+bootstrap_fewshot,dka_04,INVALID,"I'm 33 (female). Main problem: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake — getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## completed ## ]] 
+
+Expect | no parsable output"
+bootstrap_fewshot,burn_major_04,URGENT,"About my 4-year-old son: a big burn over the front of the body after a pan of boiling water tipped over, 15 minutes ago. Also: screaming in pain.",
+bootstrap_fewshot,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+bootstrap_fewshot,suicidal_07,URGENT,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",
+bootstrap_fewshot,ab_gibleed_06,URGENT,"Age 61, male. Symptoms: vomiting bright red blood and passing black, tarry stools; over the last few hours. Background: Has mild hay fever.",
+bootstrap_fewshot,suicidal_03,URGENT,33-year-old woman. Presenting complaint: hopelessness with a clear intention to end life and access to the means at home; today. Associated: lives alone. Has high cholesterol on a statin.,
+mipro_instructions,anaphylaxis_07,URGENT,"Hi, 39F here. My issue: swelling of the lips and tongue, wheezing and a widespread itchy rash after eating peanuts, beginning a few minutes ago. Background: Has mild hay fever.",
+mipro_instructions,ab_gibleed_00,URGENT,31-year-old woman. Presenting complaint: throwing up blood twice and having black sticky stools; since this morning. Associated: pale and clammy. Has hypothyroidism on levothyroxine.,
+mipro_instructions,dka_04,URGENT,"I'm 33 (female). Main problem: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake — getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin.",
+mipro_instructions,burn_major_04,URGENT,"About my 4-year-old son: a big burn over the front of the body after a pan of boiling water tipped over, 15 minutes ago. Also: screaming in pain.",
+mipro_instructions,preeclampsia_03,URGENT,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",
+mipro_instructions,suicidal_07,URGENT,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",
+mipro_instructions,dka_02,URGENT,"Age 23, male. Symptoms: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake; getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin. I recently moved house.",
+mipro_instructions,ha_mening_01,URGENT,"Hi, 22F here. My issue: fever, headache, pain bending the neck and dark spots on the skin that don't blanch, since this morning. Also: increasingly drowsy, light hurts the eyes. Background: Has mild hay fever. I recently moved house.",
+mipro_instructions,cough_haemoptysis_04,INVALID,"66-year-old woman. Presenting complaint: coughing up large amounts of bright red blood, several cupfuls; starting this evening. Has hypothyroidism on levothyroxine.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+possible urgent condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Seek same-day medical assessment.
+
+[[ ## completed ## ]] 
+
+Expecte | no parsable output"
+mipro_instructions,ab_gibleed_06,URGENT,"Age 61, male. Symptoms: vomiting bright red blood and passing black, tarry stools; over the last few hours. Background: Has mild hay fever.",
+mipro_instructions,cough_haemoptysis_03,INVALID,"Hi, 49F here. My issue: coughing up lots of fresh blood repeatedly, starting this evening. Also: breathless. Background: Has hypothyroidism on levothyroxine.","AdapterParseError: Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: [[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+possible emergency condition
+
+[[ ## red_flags ## ]]
+[""concerning feature""]
+
+[[ ## recommended_action ## ]]
+Call emergency services now.
+
+[[ ## completed ## ]] 
+
+Expect | no parsable output"
+mipro_instructions,suicidal_03,URGENT,33-year-old woman. Presenting complaint: hopelessness with a clear intention to end life and access to the means at home; today. Associated: lives alone. Has high cholesterol on a statin.,
+mipro_full,preeclampsia_07,URGENT,"Age 42, female. Symptoms: 30 weeks pregnant with a severe headache, flashing lights in the vision and sudden swelling of the face and hands; since this afternoon. Background: Takes no regular medication. I'm travelling abroad next month.",
+mipro_full,palp_syncope_01,URGENT,"59-year-old woman. Presenting complaint: the heart pounding very fast, then passing out briefly; 20 minutes ago. Associated: still feels faint. Previously fit and well.",

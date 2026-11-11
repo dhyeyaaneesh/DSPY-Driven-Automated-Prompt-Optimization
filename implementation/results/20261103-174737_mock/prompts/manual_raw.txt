@@ -1,0 +1,17 @@
+=== SYSTEM ===
+You are a medical triage assistant. Read the symptom description and assign an urgency level.
+
+Urgency levels:
+- EMERGENCY: Potentially life- or limb-threatening; needs emergency services / ED immediately.
+- URGENT: Needs same-day medical assessment (within hours), but not an ambulance.
+- NON_URGENT: Should see a clinician, but a routine appointment within days to weeks is safe.
+- SELF_CARE: Can be safely managed at home with self-care and safety-netting advice.
+
+Identify any red-flag features, state the most likely primary concern, and give a short recommended action.
+Also give a confidence between 0 and 1.
+
+Respond with ONLY a JSON object with these keys:
+{"urgency_level": "EMERGENCY|URGENT|NON_URGENT|SELF_CARE", "primary_concern": "...", "red_flags": ["..."], "recommended_action": "...", "confidence": 0.0}
+
+=== USER ===
+Symptoms: I'm 17 (male). Main problem: a first-ever seizure lasting about one minute, now awake and talking normally — about 3 hours ago. Background: Takes no regular medication. Can I still go to the gym?

@@ -1,0 +1,50 @@
+{
+  "manual_raw": {
+    "optimize": {
+      "wall_time_s": 0.0,
+      "lm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "est_cost_usd": 0.0
+    },
+    "evaluate": {
+      "wall_time_s": 1418.46,
+      "lm_calls": 40,
+      "input_tokens": 12705,
+      "output_tokens": 11315,
+      "est_cost_usd": 0.0043
+    }
+  },
+  "dspy_zeroshot": {
+    "optimize": {
+      "wall_time_s": 0.0,
+      "lm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "est_cost_usd": 0.0
+    },
+    "evaluate": {
+      "wall_time_s": 280.92,
+      "lm_calls": 40,
+      "input_tokens": 28415,
+      "output_tokens": 15868,
+      "est_cost_usd": 0.0069
+    }
+  },
+  "bootstrap_fewshot": {
+    "optimize": {
+      "wall_time_s": 31.72,
+      "lm_calls": 3,
+      "input_tokens": 3302,
+      "output_tokens": 719,
+      "est_cost_usd": 0.0005
+    },
+    "evaluate": {
+      "wall_time_s": 337.61,
+      "lm_calls": 40,
+      "input_tokens": 46015,
+      "output_tokens": 14140,
+      "est_cost_usd": 0.0077
+    }
+  }
+}

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Triage classification performance on the held-out test set.}
+\label{tab:main}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Condition & Accuracy & Macro-F1 & Weighted κ & Emerg. sens. \\
+\midrule
+Manual prompt & 0.562 & 0.576 & 0.650 & 0.667 \\
+DSPy zero-shot & 0.525 & 0.558 & 0.630 & 0.556 \\
+BootstrapFewShot & 0.688 & 0.693 & 0.731 & 0.704 \\
+MIPROv2 (instr.) & 0.525 & 0.558 & 0.630 & 0.556 \\
+MIPROv2 (instr.+demos) & \textbf{0.762} & \textbf{0.753} & \textbf{0.799} & \textbf{0.926} \\
+\bottomrule
+\end{tabular}}
+\end{table}

@@ -1,0 +1,165 @@
+case_id,scenario_id,symptoms,gold,pred,direction,valid,completeness,errors,primary_concern,red_flags,recommended_action,confidence,latency_s,raw,api_error
+neuro_seizure_first_05,neuro_seizure_first,"I'm 17 (male). Main problem: a first-ever seizure lasting about one minute, now awake and talking normally — about 3 hours ago. Background: Takes no regular medication. Can I still go to the gym?",URGENT,URGENT,correct,True,1.0,,First-time generalized tonic‑clonic seizure,"['first-ever seizure', 'post‑ictal confusion resolved but still within 3\u202fh']","Seek immediate medical evaluation (e.g., urgent clinic or ED) to assess for underlying causes and determine safety for physical activity; avoid gym until cleared.",0.93,0.673,,False
+neuro_seizure_long_02,neuro_seizure_long,"About my 11-year-old son: a fit with jerking of all limbs that has been going on for more than 5 minutes, currently ongoing.",EMERGENCY,EMERGENCY,correct,True,1.0,,Prolonged generalized seizure,"['Seizure lasting >5 minutes', 'Ongoing seizure activity']",Call emergency services (911) immediately and keep the child safe from injury while awaiting help.,0.99,1.903,,False
+suicidal_01,suicidal,"Age 45, female. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has hypothyroidism on levothyroxine.",EMERGENCY,EMERGENCY,correct,True,1.0,,Suicidal ideation with plan,"['thoughts of suicide with a specific plan to act tonight', 'living alone']","Call emergency services (911) or go to the nearest emergency department immediately; if unable to call, contact a trusted friend or family member for help and stay with them until help arrives.",0.99,191.685,,False
+toothache_01,toothache,"33-year-old man. Presenting complaint: a toothache in a back tooth when eating something cold, no swelling; for a week. Associated: no facial swelling. Has hypothyroidism on levothyroxine.",NON_URGENT,SELF_CARE,under,True,1.0,,Dental pain (possible tooth decay or pulpal inflammation),[],"Apply a cold compress to the cheek, take an over‑the‑counter pain reliever such as ibuprofen or acetaminophen, and schedule a dental appointment within the next week for evaluation and possible treatment.",0.97,552.698,,False
+ha_gca_03,ha_gca,"80-year-old woman. Presenting complaint: new one-sided temple headache, sore scalp when brushing hair and jaw pain on chewing; over the past 2 weeks. Non-smoker. They mention their sleep has been fine.",URGENT,URGENT,correct,True,1.0,,Possible temporal arteritis (giant cell arteritis),"['new one-sided temple headache', 'jaw claudication (pain on chewing)', 'sore scalp when brushing hair']","Seek urgent medical evaluation (e.g., call emergency services or go to the nearest emergency department) for possible temporal arteritis and initiate prompt treatment.",0.97,326.907,,False
+anaphylaxis_07,anaphylaxis,"Hi, 39F here. My issue: swelling of the lips and tongue, wheezing and a widespread itchy rash after eating peanuts, beginning a few minutes ago. Background: Has mild hay fever.",EMERGENCY,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value Swelling of lips and tongue, wheezing, widespread itchy rash, onset within minutes of exposure from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='Swelling of lips and ton...hin  | no parsable output",,,,,608.83,"[[ ## urgency_level ## ]]
+EMERGENCY
+
+[[ ## primary_concern ## ]]
+Anaphylaxis due to peanut allergy
+
+[[ ## red_flags ## ]]
+Swelling of lips and tongue, wheezing, widespread itchy rash, onset within minutes of exposure
+
+[[ ## recommended_action ## ]]
+Administer epinephrine immediately (auto‑injector if available), call emergency services, and monitor airway, breathing, and circulation while awaiting help.
+
+[[ ## confidence ## ]]
+0.99
+
+[[ ## completed ## ]]
+",False
+ab_gibleed_00,ab_gibleed,31-year-old woman. Presenting complaint: throwing up blood twice and having black sticky stools; since this morning. Associated: pale and clammy. Has hypothyroidism on levothyroxine.,EMERGENCY,EMERGENCY,correct,True,1.0,,Upper gastrointestinal bleeding,"['vomiting blood', 'black sticky stools', 'pale', 'clammy']",Call emergency services (911) or go to the nearest emergency department immediately for resuscitation and endoscopic evaluation.,0.99,444.765,,False
+delirium_00,delirium,"83-year-old woman. Presenting complaint: suddenly more forgetful and disoriented since yesterday, family suspect a urine infection; over 2 days. Associated: eating a little. Has high cholesterol on a statin. They ask whether they can still go to the gym.",URGENT,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value - Sudden onset of forgetfulness and disorientation
+- Age > 80
+- Possible infection (UTI) with potential for sepsis from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Sudden on | no parsable output",,,,,1.854,"[[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+Acute confusion / possible delirium in an elderly patient
+
+[[ ## red_flags ## ]]
+- Sudden onset of forgetfulness and disorientation
+- Age > 80
+- Possible infection (UTI) with potential for sepsis
+
+[[ ## recommended_action ## ]]
+Seek immediate medical evaluation (e.g., urgent primary care or ED) to assess for infection, dehydration, or other causes of delirium; do not attend the gym until cleared by a clinician.
+
+[[ ## confidence ## ]]
+0.93
+
+[[ ## completed ## ]]
+",False
+dka_04,dka,"I'm 33 (female). Main problem: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake — getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin.",EMERGENCY,EMERGENCY,correct,True,1.0,,Diabetic ketoacidosis,"['Hyperglycemia with fruity breath', 'Kussmaul breathing (fast, deep breaths)', 'Altered level of consciousness (hard to wake)']",Call emergency services (911) immediately and go to the nearest emergency department for urgent evaluation and treatment.,0.99,63.73,,False
+gastro_child_dehyd_06,gastro_child_dehyd,"About my 1-year-old son: repeated vomiting and watery diarrhoea, only one wet nappy in the last 12 hours, since yesterday. Also: more tired than usual but rousable.",URGENT,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value - Decreased urine output (only one wet nappy in 12 h)
+- Persistent vomiting
+- Lethargy from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Decreased urine output...nt vomiting\ | no parsable output",,,,,0.819,"[[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+Acute gastroenteritis with dehydration risk
+
+[[ ## red_flags ## ]]
+- Decreased urine output (only one wet nappy in 12 h)
+- Persistent vomiting
+- Lethargy
+
+[[ ## recommended_action ## ]]
+Seek medical attention promptly (e.g., urgent GP or urgent care) to assess hydration status and consider rehydration therapy.
+
+[[ ## confidence ## ]]
+0.97
+
+[[ ## completed ## ]]
+",False
+back_chronic_01,back_chronic,"Hi, 41M here. My issue: aching lower back pain that has persisted despite stretching, no leg weakness or numbness, for 7 weeks. Also: works at a desk all day. Background: Has hypothyroidism on levothyroxine.",NON_URGENT,NON_URGENT,correct,True,1.0,,Chronic lower back pain,[],"Schedule an appointment with a primary care clinician or physiotherapist for a focused assessment, consider imaging if pain persists or worsens, and continue ergonomic adjustments and core strengthening exercises.",0.93,481.691,,False
+ab_gibleed_03,ab_gibleed,"Hi, 72F here. My issue: throwing up blood twice and having black sticky stools, over the last few hours. Also: feeling faint when standing, pale and clammy. Background: Has high cholesterol on a statin.",EMERGENCY,EMERGENCY,correct,True,1.0,,Upper GI bleeding,"['vomiting blood', 'black sticky stools (melena)', 'faintness on standing', 'pale and clammy']",Call emergency services (911) immediately or go to the nearest emergency department for urgent evaluation and treatment.,0.99,216.888,,False
+dental_abscess_03,dental_abscess,"66-year-old woman. Presenting complaint: a swollen face from a bad tooth, swelling now reaching the lower eyelid, with a temperature; getting worse since yesterday. Associated: breathing normally. Has high cholesterol on a statin.",URGENT,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value - Swelling extending to lower eyelid
+- Fever
+- Rapid progression from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Swelling extending to ...er\n- Rapid progression', input_ty | no parsable output",,,,,527.976,"[[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+Facial cellulitis/abscess from dental infection
+
+[[ ## red_flags ## ]]
+- Swelling extending to lower eyelid
+- Fever
+- Rapid progression
+
+[[ ## recommended_action ## ]]
+Seek urgent medical evaluation (e.g., urgent care or ED) for possible drainage and antibiotic therapy; do not wait.
+
+[[ ## confidence ## ]]
+0.93
+
+[[ ## completed ## ]]
+",False
+ankle_sprain_03,ankle_sprain,"Hi, 56F here. My issue: a minor ankle sprain, walking on it but a bit sore, this morning. Background: No significant past medical history. Can I still go to the gym?",SELF_CARE,SELF_CARE,correct,True,1.0,,Minor ankle sprain,[],"Rest, ice, compression, and elevation (RICE) for the first 48 hours; avoid high-impact activities like gym workouts until pain and swelling improve—if symptoms worsen or you develop severe pain, swelling, or instability, seek medical evaluation.",0.97,525.721,,False
+burn_minor_06,burn_minor,"Hi, 44F here. My issue: briefly touched a hot pan, leaving a red sore fingertip with no blistering, an hour ago. Also: cooled under the tap already. Background: Has high cholesterol on a statin.",SELF_CARE,SELF_CARE,correct,True,1.0,,Minor thermal burn (first‑degree),[],"Apply a cool compress, keep the area clean, use an over‑the‑counter antibiotic ointment if desired, and monitor for signs of infection or worsening; seek medical care if the burn becomes more painful, shows signs of infection, or does not improve in a few days.",0.97,0.855,,False
+burn_major_04,burn_major,"About my 4-year-old son: a big burn over the front of the body after a pan of boiling water tipped over, 15 minutes ago. Also: screaming in pain.",EMERGENCY,EMERGENCY,correct,True,1.0,,Severe scald burn,"['severe pain', 'large burn area', 'child in distress']",Call emergency services (911) immediately for urgent medical evaluation and burn care.,0.99,14823.279,,False
+hives_mild_04,hives_mild,"Hi, 15M here. My issue: a few itchy raised welts on the forearms after trying a new soap, with no face swelling or breathing problems, for a few hours. Also: antihistamine is helping.",SELF_CARE,SELF_CARE,correct,True,1.0,,Allergic contact dermatitis,[],"Discontinue use of the new soap, apply a cool compress, and continue antihistamine; if the rash spreads, worsens, or develops swelling, seek medical attention.",0.97,0.634,,False
+back_chronic_04,back_chronic,"I'm 55 (female). Main problem: aching lower back pain that has persisted despite stretching, no leg weakness or numbness — for about 2 months. Also: works at a desk all day. Background: Previously fit and well. My sleep has been fine.",NON_URGENT,NON_URGENT,correct,True,1.0,,Chronic lower back pain,[],"Schedule a primary‑care appointment for a focused back‑pain assessment, consider imaging if pain persists or worsens, and discuss ergonomics, core strengthening, and pain‑management strategies.",0.93,2.71,,False
+burn_moderate_04,burn_moderate,I'm 67 (female). Main problem: a blistering burn about the size of a palm on the forearm from a hot iron — 2 hours ago. Background: Has high cholesterol on a statin.,URGENT,URGENT,correct,True,1.0,,Second‑degree burn on forearm,[],"Apply a cool (not cold) compress, cover with a sterile non‑adhesive dressing, take an over‑the‑counter pain reliever (e.g., ibuprofen or acetaminophen), and schedule an urgent visit to a primary care provider or urgent care clinic for wound assessment and possible tetanus update.",0.88,1.408,,False
+burn_moderate_01,burn_moderate,"75-year-old man. Presenting complaint: a burn on the back of the hand that has blistered, roughly 5 cm across; this morning. Associated: cooled under running water for 20 minutes. Has well-controlled high blood pressure.",URGENT,SELF_CARE,under,True,1.0,,Second‑degree burn on hand,[],"Cover the blistered area with a clean, non‑adhesive dressing, keep it clean and dry, and monitor for signs of infection (increased redness, warmth, pus, or fever); seek medical attention if any of these develop.",0.97,0.668,,False
+palp_syncope_06,palp_syncope,"Hi, 61F here. My issue: a racing, irregular heartbeat with chest pain and fainting, this evening. Also: short of breath. Background: Has high cholesterol on a statin.",EMERGENCY,EMERGENCY,correct,True,1.0,,Possible acute cardiac arrhythmia or ischemia,"['Chest pain', 'Fainting (syncope)', 'Shortness of breath']",Call emergency services (911) immediately and seek urgent medical care.,0.99,0.669,,False
+preeclampsia_03,preeclampsia,"Age 20, female. Symptoms: late pregnancy with a pounding headache, blurred vision and puffy face; since this afternoon. Also: pain under the ribs on the right. Background: Takes no regular medication.",EMERGENCY,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value - Headache
+- Blurred vision
+- Facial puffiness
+- Right rib pain (possible abdominal pain) from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Headache\n- Blurred vi...ossible a | no parsable output",,,,,0.632,"[[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+Preeclampsia (possible severe hypertension)
+
+[[ ## red_flags ## ]]
+- Headache
+- Blurred vision
+- Facial puffiness
+- Right rib pain (possible abdominal pain)
+
+[[ ## recommended_action ## ]]
+Seek immediate medical attention—call emergency services or go to the nearest emergency department for blood pressure measurement, laboratory tests, and evaluation for preeclampsia.
+
+[[ ## confidence ## ]]
+0.97
+
+[[ ## completed ## ]]
+",False
+suicidal_07,suicidal,"Age 54, male. Symptoms: low mood with thoughts of suicide and a specific plan to act on them tonight; for the past week, worse today. Also: lives alone. Background: Has high cholesterol on a statin. I recently moved house.",EMERGENCY,EMERGENCY,correct,True,1.0,,Suicidal ideation with plan,"['thoughts of suicide', 'specific plan to act on them tonight', 'living alone']","Call emergency services (911) or go to the nearest emergency department immediately; if unable to call, contact a trusted friend or family member for help and stay with them until help arrives.",0.99,9.467,,False
+burn_minor_07,burn_minor,"76-year-old man. Presenting complaint: a small red mark on the finger from the oven tray, no blister; this evening. No significant past medical history. They had a flu vaccine last month.",SELF_CARE,SELF_CARE,correct,True,1.0,,Minor burn (first‑degree),[],"Apply a cool compress, keep the area clean, use a non‑occlusive dressing if desired, and watch for signs of infection or worsening; seek medical attention if the area becomes painful, swollen, or develops blisters.",0.97,15.001,,False
+ha_mild_05,ha_mild,I'm 45 (male). Main problem: a dull headache after a long day at the screen that settled with rest and water — today. Also: no other symptoms. Background: Non-smoker. I had a flu vaccine last month.,SELF_CARE,SELF_CARE,correct,True,1.0,,Screen‑related tension headache,[],"Take a break from screens, apply a cold compress to the forehead, stay hydrated, and consider over‑the‑counter pain relief; if the headache recurs or worsens, schedule a primary care visit.",0.97,2.155,,False
+delirium_06,delirium,"78-year-old man. Presenting complaint: suddenly more forgetful and disoriented since yesterday, family suspect a urine infection; over 2 days. Associated: eating a little; no fever. No significant past medical history. They recently moved house.",URGENT,URGENT,correct,True,1.0,,Acute confusion / possible urinary tract infection in elderly,"['Sudden onset confusion', 'Disorientation', 'Age > 65']","Seek urgent medical evaluation (e.g., call emergency services or go to the nearest urgent care) for assessment, possible urine testing, and supportive care.",0.88,17.154,,False
+neuro_seizure_first_02,neuro_seizure_first,"I'm 54 (female). Main problem: a single shaking episode with loss of consciousness for under a minute, never happened before, now fully recovered — this morning. Also: bit tongue, tired but alert. Background: Has well-controlled high blood pressure.",URGENT,INVALID,invalid,False,0.0,"AdapterParseError: Failed to parse field red_flags with value - Loss of consciousness < 1 minute
+- Tongue biting
+- Recent episode of unexplained shaking from the LM response. Error message: 1 validation error for list[str]
+  Input should be a valid list [type=list_type, input_value='- Loss of consciousness ... of unex | no parsable output",,,,,3.065,"[[ ## urgency_level ## ]]
+URGENT
+
+[[ ## primary_concern ## ]]
+Unexplained brief loss of consciousness (possible syncope or seizure)
+
+[[ ## red_flags ## ]]
+- Loss of consciousness < 1 minute
+- Tongue biting
+- Recent episode of unexplained shaking
+
+[[ ## recommended_action ## ]]
+Seek urgent medical evaluation (e.g., visit an urgent care or emergency department) to rule out cardiac, neurological, or other serious causes.
+
+[[ ## confidence ## ]]
+0.93
+
+[[ ## completed ## ]]
+",False
+ha_injury_minor_06,ha_injury_minor,"Hi, 27M here. My issue: knocked the forehead on a doorframe, small lump, no vomiting or confusion, this morning. Background: Has well-controlled high blood pressure.",SELF_CARE,SELF_CARE,correct,True,1.0,,Minor head injury (contusion),[],"Apply a cold compress to the bump, keep the head elevated, monitor for any new symptoms such as headache, dizziness, vomiting, or confusion; seek medical attention if any of these develop.",0.97,10.314,,False
+dka_02,dka,"Age 23, male. Symptoms: diabetic, very high sugar readings, vomiting, breathing fast and deep, hard to wake; getting worse over 12 hours. Also: fruity smell on breath, tummy pain. Background: Has high cholesterol on a statin. I recently moved house.",EMERGENCY,EMERGENCY,correct,True,1.0,,Diabetic ketoacidosis,"['vomiting', 'rapid deep breathing', 'hard to wake', 'fruity breath', 'abdominal pain', 'very high blood sugar']",Call emergency services (911) immediately and seek urgent medical care; do not wait for a scheduled appointment.,0.99,9.009,,False
+eczema_03,eczema,"Hi, 13M here. My issue: dry, itchy, scaly patches on the elbows and behind the knees, for most of the winter. Also: no fever.",NON_URGENT,SELF_CARE,under,True,1.0,,Atopic dermatitis (eczema),[],"Apply a fragrance‑free emollient regularly, use mild soap, avoid scratching, and consider an over‑the‑counter hydrocortisone 1% cream for flare‑ups; seek medical advice if lesions become infected or worsen.",0.97,9.952,,False
+fev_vacc_04,fev_vacc,"About my 1-year-old daughter: a slight fever and a sore leg where the jab was given, otherwise happy, since yesterday. Also: wet nappies as normal.",SELF_CARE,SELF_CARE,correct,True,1.0,,Post‑vaccination soreness with low‑grade fever,[],"Give a child‑safe dose of paracetamol if the fever is uncomfortable, keep the child hydrated, apply a cool compress to the sore area, and monitor for worsening fever, swelling, or redness; seek medical attention if symptoms worsen or new symptoms appear.",0.97,1.125,,False
+neuro_bppv_01,neuro_bppv,55-year-old man. Presenting complaint: brief spinning episodes lasting under a minute when rolling over in bed or looking up; for 2 weeks. Associated: no weakness or speech problems; no hearing loss. No significant past medical history. They ask whether they can still go to the gym.,NON_URGENT,NON_URGENT,correct,True,1.0,,Benign positional vertigo,[],Schedule a primary‑care appointment for a vestibular assessment and discuss safe return to exercise; avoid sudden head movements until evaluation.,0.93,10.334,,False
+back_chronic_06,back_chronic,"Hi, 42M here. My issue: aching lower back pain that has persisted despite stretching, no leg weakness or numbness, for 7 weeks. Background: Non-smoker.",NON_URGENT,NON_URGENT,correct,True,1.0,,Chronic lower back pain,[],Schedule an appointment with a primary care clinician or physiotherapist for a focused assessment and discuss a structured exercise and pain‑management plan.,0.88,15.921,,False
+eczema_04,eczema,"Hi, 26M here. My issue: dry, itchy, scaly patches on the elbows and behind the knees, for most of the winter. Also: moisturiser helps a little. Background: Has high cholesterol on a statin. I've been drinking more coffee than usual.",NON_URGENT,SELF_CARE,under,True,1.0,,Eczema (atopic dermatitis),[],"Apply a fragrance‑free, non‑irritating moisturizer regularly, use mild soap, avoid hot showers, and consider an over‑the‑counter hydrocortisone 1% cream for flare‑ups; seek medical advice if lesions become infected or worsen.",0.97,1.559,,False
+cp_angina_05,cp_angina,"Age 61, female. Symptoms: tightness in the chest that comes on when walking uphill and settles after a few minutes of rest; over the last 5 days, getting a bit more frequent. Also: no pain at rest, a family history of heart disease. Background: Has hypothyroidism on levothyroxine.",URGENT,URGENT,correct,True,1.0,,Exertional chest tightness (possible angina),"['progressive worsening of exertional chest tightness over 5 days', 'family history of heart disease']","Seek same‑day evaluation by a clinician (e.g., primary care or cardiology) for assessment and possible cardiac testing; consider calling emergency services if symptoms worsen or new symptoms such as shortness of breath, sweating, or nausea appear.",0.93,18.897,,False
+sob_asthma_00,sob_asthma,"Hi, 37M here. My issue: worsening wheeze and chest tightness, using the blue inhaler much more than usual, since a cold started 3 days ago. Background: No significant past medical history.",URGENT,URGENT,correct,True,1.0,,Acute asthma exacerbation,[],"Seek urgent medical evaluation (e.g., urgent care or ED) for a possible asthma flare‑up; consider using a rescue inhaler as prescribed and monitor for worsening shortness of breath or cyanosis.",0.93,1.74,,False
+conjunctivitis_05,conjunctivitis,"About my 3-year-old son: pink eye with crusting on the lashes, seeing fine, since yesterday. Also: no light sensitivity.",SELF_CARE,SELF_CARE,correct,True,1.0,,Conjunctivitis (pink eye),[],"Apply warm compresses, keep the eye clean, use over‑the‑counter artificial tears if needed, and avoid sharing towels or eye cosmetics; seek medical care if vision changes, severe pain, or symptoms worsen.",0.97,1.078,,False
+low_mood_00,low_mood,"I'm 37 (female). Main problem: feeling flat and tired with low motivation, no thoughts of harming themselves — for about 6 weeks. Background: Has hypothyroidism on levothyroxine. I've been drinking more coffee than usual.",NON_URGENT,NON_URGENT,correct,True,1.0,,Chronic fatigue / depressive symptoms,[],"Schedule an appointment with a primary care provider or mental health professional to review thyroid function, assess for depression, and discuss lifestyle changes and possible treatment options.",0.88,4.402,,False
+ha_mening_05,ha_mening,"24-year-old man. Presenting complaint: a severe headache with high fever, a stiff neck and a purple rash that does not fade under a glass; since this morning. Associated: increasingly drowsy. Has well-controlled high blood pressure.",EMERGENCY,EMERGENCY,correct,True,1.0,,Suspected meningococcal sepsis,"['severe headache', 'high fever', 'stiff neck', 'petechial rash', 'increasing drowsiness']",Call emergency services immediately and transport to the nearest emergency department for urgent evaluation and treatment.,0.99,10.574,,False
+ectopic_06,ectopic,"Age 27, female. Symptoms: a positive pregnancy test 2 weeks ago and now cramping pain on one side with some spotting; since this morning. Also: no fainting. Background: Has hypothyroidism on levothyroxine.",URGENT,URGENT,correct,True,1.0,,Early pregnancy complication (possible ectopic pregnancy or threatened abortion),"['cramping pain on one side', 'spotting', 'positive pregnancy test']","Seek immediate medical assessment (e.g., call your OB/GYN or go to urgent care/ER) for a pelvic exam and ultrasound to rule out ectopic pregnancy or other complications.",0.97,7.776,,False
